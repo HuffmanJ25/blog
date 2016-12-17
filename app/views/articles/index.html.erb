@@ -1,13 +1,32 @@
 <h1>All Articles</h1>
+    <div class="mdl-grid">
+  <% @articles.each_with_index do |article, index| %>
+    <% if (index == 0)%>
+      <div class="mdl-cell mdl-cell--6-col">
+    <% else %>
+      <div class="mdl-cell mdl-cell--3-col">
+    <% end %>
 
-<ul id="articles">
-  <% @articles.each do |article| %>
-  <li>
-    <%= link_to article.title, article_path(article), class: 'article_title'%>
-  </li>
+        <div class="mdl-card mdl-shadow--4dp">
+          <div class="mdl-card__title" style="background: url(<%= image(article.image) %>) center / cover;"
+            <%= link_to article.title, article_path(article), class: 'mdl-card__title-text'%>
+          </div>
+          <div class="mdl-card__supporting-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Mauris sagittis pellentesque lacus eleifend lacinia...
+          </div>
+          <div class="mdl-card__menu">
+            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+              <i class="material-icons">share</i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+
   <% end %>
-</ul>
-
-<% if logged_in %>
-  <%= link_to "Create New Article", new_article_path, class: 'new_article' %>
+    </div>
+<% if logged_in? %>
+  <%= link_to "Create New Article", new_article_path, class: 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent' %><br />
+  <%= link_to "Log Out", logout_path, method: :delete, class: "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" %>
 <% end %>
