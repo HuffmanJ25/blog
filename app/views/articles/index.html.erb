@@ -2,21 +2,24 @@
     <div class="mdl-grid">
   <% @articles.each_with_index do |article, index| %>
     <% if (index == 0)%>
-      <div class="mdl-cell mdl-cell--6-col">
+      <div class="mdl-cell mdl-cell--3-col">
     <% else %>
       <div class="mdl-cell mdl-cell--3-col">
     <% end %>
 
         <div class="mdl-card mdl-shadow--4dp">
+
           <div class="mdl-card__title" style="background: url(<%= image(article.image) %>) center / cover;">
+            <div class="container-image"></div>
             <%= link_to article.title, article_path(article), class: 'mdl-card__title-text'%>
-          </div>
+
+        </div>
           <div class="mdl-card__supporting-text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Mauris sagittis pellentesque lacus eleifend lacinia...
           </div>
           <div class="mdl-card__menu">
-            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+            <button class="mdl-button mdl-button--icon mdl-button--fab mdl-js-ripple-effect mdl-button--primary">
               <i class="material-icons">share</i>
             </button>
           </div>

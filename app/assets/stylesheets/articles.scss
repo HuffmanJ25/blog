@@ -4,8 +4,22 @@
 .mdl-card__title {
   color: #fff;
   height: 176px;
+  position: relative;
 }
 
 .mdl-button {
   margin: 10px;
+}
+
+.mdl-card__title-text {
+  z-index: 3;
+}
+
+.container-image {
+  background-color: rgba(0, 0, 0, .3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%
 }
