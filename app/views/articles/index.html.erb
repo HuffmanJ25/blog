@@ -1,13 +1,11 @@
-<h1>All Articles</h1>
+
+<div class="index-container">
+  <h1>All Articles</h1>
     <div class="mdl-grid">
   <% @articles.each_with_index do |article, index| %>
-    <% if (index == 0)%>
-      <div class="mdl-cell mdl-cell--3-col">
-    <% else %>
-      <div class="mdl-cell mdl-cell--3-col">
-    <% end %>
+        <%= render partial: 'layouts/index', locals: {index: index} %>
 
-        <div class="mdl-card mdl-shadow--4dp">
+        <div class="<%= card_title(index) %> mdl-shadow--4dp">
 
           <div class="mdl-card__title" style="background: url(<%= image(article.image) %>) center / cover;">
             <div class="container-image"></div>
@@ -29,7 +27,10 @@
 
   <% end %>
     </div>
+
+
 <% if logged_in? %>
   <%= link_to "Create New Article", new_article_path, class: 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent' %><br />
   <%= link_to "Log Out", logout_path, method: :delete, class: "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" %>
 <% end %>
+  </div>
