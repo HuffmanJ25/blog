@@ -2,7 +2,9 @@
 <div class="index-container">
 
   <div class="mdl-grid">
-
+    <div class="motto-container">
+      <h1 class="motto">Taking development to infinity and beyond...</h1>
+    </div>
   <% @articles.each_with_index.reverse_each do |article, index| %>
     <%= render partial: 'layouts/index', locals: {index: index} %>
 
