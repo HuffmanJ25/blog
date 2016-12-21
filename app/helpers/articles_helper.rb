@@ -18,4 +18,8 @@ module ArticlesHelper
       "mdl-card"
     end
   end
+
+  def comment_author(auth)
+     auth.empty? ? "Mysterious Person" : auth
+   end
 end

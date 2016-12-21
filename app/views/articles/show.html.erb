@@ -13,10 +13,10 @@
   </div>
   <div class="mdl-cell mdl-cell--2-col">
       <h2>Tags:</h2>
-      <ul>
+      <ul class="tag-list">
         <% @article.tags.each do |tag| %>
-          <li>
-            <%= link_to tag, tag_path(tag), class: "" %>
+          <li class="tag-items">
+            <%= link_to tag, tag_path(tag), class: "tags" %>
           </li>
         <% end %>
     </ul>
@@ -28,3 +28,4 @@
     <% end %>
 
 </div>
+y
