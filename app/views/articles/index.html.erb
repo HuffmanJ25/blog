@@ -1,36 +1,26 @@
-
 <div class="index-container">
-  <h1>All Articles</h1>
-    <div class="mdl-grid">
-  <% @articles.each_with_index do |article, index| %>
-        <%= render partial: 'layouts/index', locals: {index: index} %>
-
-        <div class="<%= card_title(index) %> mdl-shadow--4dp">
-
-          <div class="mdl-card__title" style="background: url(<%= image(article.image) %>) center / cover;">
-            <div class="container-image"></div>
-            <%= link_to article.title, article_path(article), class: 'mdl-card__title-text'%>
-
-        </div>
-          <div class="mdl-card__supporting-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Mauris sagittis pellentesque lacus eleifend lacinia...
-          </div>
-          <div class="mdl-card__menu">
-            <button class="mdl-button mdl-button--icon mdl-button--fab mdl-js-ripple-effect mdl-button--primary">
-              <i class="material-icons">share</i>
-            </button>
-          </div>
-        </div>
-      </div>
-
-
-  <% end %>
+  <div class="mdl-grid">
+    <div class="motto-container">
+      <h1 class="motto">Taking development to infinity and beyond...</h1>
     </div>
+    <% @articles.each_with_index.reverse_each do |article, index| %>
+    <%= render partial: 'layouts/index', locals: {index: index} %>
 
+      <div class="mdl-card__title" style="background: url(<%= image(article.image) %>) center / cover;">
+        <div class="container-image"></div>
+        <%= link_to article.title, article_path(article), class: 'mdl-card__title-text' %>
+      </div>
+      <div class="mdl-card__supporting-text">
+        <p><%= article.body[0...100] %>...</p>
+      </div>
+  </div>
+  <% end %>
+</div>
 
 <% if logged_in? %>
-  <%= link_to "Create New Article", new_article_path, class: 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent' %><br />
-  <%= link_to "Log Out", logout_path, method: :delete, class: "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" %>
-<% end %>
+  <div class="logged-in-button">
+    <%= link_to "Create New Article", new_article_path, class: 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent' %><br />
+    <%= link_to "Log Out", logout_path, method: :delete, class: "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" %>
   </div>
+<% end %>
+</div>

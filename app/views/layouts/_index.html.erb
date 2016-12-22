@@ -1,7 +1,8 @@
-<% if index == 0 %>
-  <div class="mdl-cell mdl-cell--9-col">
-<% elsif index == 1 %>
-    <div class="mdl-cell mdl-cell--3-col">
-  <% else %>
-    <div class="mdl-cell mdl-cell--4-col">
+<% len = @articles.length %>
+<% if index == len-1 %>
+        <div class="mdl-card-wide mdl-cell mdl-cell--9-col mdl-shadow--4dp">
+<% elsif index == len-2 %>
+        <div class=" mdl-card-wide mdl-cell mdl-cell--3-col mdl-shadow--4dp">
+<% else %>
+        <div class="mdl-card-wide mdl-cell mdl-cell--4-col mdl-shadow--4dp">
 <%  end %>
