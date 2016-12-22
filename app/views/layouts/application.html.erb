@@ -3,8 +3,6 @@
   <head>
     <title>Blog</title>
     <%= csrf_meta_tags %>
-
-
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.teal-deep_orange.min.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway|Rock+Salt" rel="stylesheet">
@@ -17,11 +15,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <%= render 'layouts/header' %>
-    <p class="flash"><%= flash.notice %></p>
-    <%= yield %>
-    <%= render 'layouts/footer' %>
+    <div class="mdl-layout mdl-js-layout mdl-layout__header-scroll mdl-layout--fixed-header">
+      <%= render 'layouts/header' %>
+      <p class="flash"><%= flash.notice %></p>
+      <main class="mdl-layout__content">
+        <%= yield %>
+      </main>
+      <%= render 'layouts/footer' %>
+    </div>
   </body>
 </html>
