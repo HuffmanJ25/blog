@@ -19,6 +19,17 @@ module ArticlesHelper
     end
   end
 
+  def col_size(index)
+    len = @articles.length
+     if index == len-1
+            "9"
+     elsif index == len-2
+            "3"
+     else
+            "4"
+      end
+  end
+
   def comment_author(auth)
      auth.empty? ? "Mysterious Person" : auth
    end
