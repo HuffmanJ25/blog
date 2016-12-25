@@ -22,11 +22,11 @@ module ArticlesHelper
   def col_size(index)
     len = @articles.length
      if index == len-1
-            "9"
+            "mdl-card-wide mdl-cell mdl-cell--9-col-desktop mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-shadow--4dp"
      elsif index == len-2
-            "3"
+            "mdl-card-wide mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-shadow--4dp"
      else
-            "4"
+            "mdl-card-wide mdl-cell mdl-cell--4-col-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone mdl-shadow--4dp"
       end
   end
 

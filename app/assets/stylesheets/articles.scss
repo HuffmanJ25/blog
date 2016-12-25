@@ -83,3 +83,9 @@
   color: teal;
   text-transform: uppercase;
 }
+
+@media (max-width:900px){
+  .index-container {
+    width: 100%;
+  }
+}
