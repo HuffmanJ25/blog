@@ -1,0 +1,68 @@
+// Place all the styles related to the resource controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "variables";
+
+.tab-container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+
+  ul {
+  padding: 0;
+}
+
+  li {
+  list-style-type: none;
+  text-align: center;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  border-left: 4px solid black;
+  border-bottom: 1px solid black;
+}
+  li:hover {
+    border-left: 4px solid $accent-color;
+    box-shadow: 1px 1px 4px black;
+    color: black;
+  }
+
+  a:hover {
+    color: $accent-color;
+  }
+
+  li:active {
+    border-left: 4px solid teal;
+    box-shadow: inset 1px 1px 4px black;
+  }
+
+  li:nth-child(odd) {
+    background-color: #f0f5ff
+  }
+
+  li:nth-child(even) {
+    background-color: #f3f0ff
+  }
+
+  li > a {
+  text-decoration: none;
+  color: black;
+  padding: 20px 0;
+  display: inline-block;
+  width: 100%;
+  text-transform: uppercase;
+}
+}
+
+.mdl-tabs {
+  padding: 20px;
+}
+
+.mdl-tabs__tab:hover {
+  color: $accent-color;
+}
+
+.mdl-tabs__panel {
+  padding: 40px;
+}

@@ -4,7 +4,7 @@
       <h1 class="motto">Taking development to infinity and beyond...</h1>
     </div>
     <% @articles.each_with_index.reverse_each do |article, index| %>
-    <%= render partial: 'layouts/index', locals: {index: index} %>
+      <div class="<%= col_size(index) %>">
 
       <div class="mdl-card__title" style="background: url(<%= image(article.image) %>) center / cover;">
         <div class="container-image"></div>

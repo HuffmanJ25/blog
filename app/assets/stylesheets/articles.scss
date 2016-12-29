@@ -1,6 +1,8 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "variables";
+
 .index-container {
   width: 80%;
   margin-left: auto;
@@ -25,6 +27,13 @@
   z-index: 3;
   text-decoration: none;
   text-shadow: 1px 1px black;
+  padding: 10px;
+  background-color: rgba(0,0,0,.8);
+  border: 1px solid black;
+}
+
+.mdl-card__title-text:hover {
+  border-left: 1px solid $accent-color;
 }
 
 .container-image {
@@ -50,13 +59,12 @@
 }
 
 .article-body{
-  border-bottom: 1px solid black;
   border-top: 1px solid black;
   padding: 10px 0;
 }
 
 .comment-wrapper {
-  border: 1px solid black;
+  box-shadow: 1px 1px 6px black;
   background: rgba(0,0,0,.1);
   padding: 20px;
 }
@@ -65,6 +73,9 @@
   padding: 2% 5%;
   box-shadow: 1px 1px 4px black;
   margin: 10px 0;
+}
+  .mdl-textfield__label {
+      color: rgba(0,0,0,.6);
 }
 
 .author-name {
@@ -80,4 +91,10 @@
   text-decoration: none;
   color: teal;
   text-transform: uppercase;
+}
+
+@media (max-width:900px){
+  .index-container {
+    width: 100%;
+  }
 }
