@@ -1,6 +1,8 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "variables";
+
 .index-container {
   width: 80%;
   margin-left: auto;
@@ -25,6 +27,13 @@
   z-index: 3;
   text-decoration: none;
   text-shadow: 1px 1px black;
+  padding: 10px;
+  background-color: rgba(0,0,0,.8);
+  border: 1px solid black;
+}
+
+.mdl-card__title-text:hover {
+  border-left: 1px solid $accent-color;
 }
 
 .container-image {
