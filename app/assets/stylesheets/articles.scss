@@ -80,7 +80,6 @@
 
 .author-name {
   padding: 0 0 0 3%;
-
 }
 
 .tag-list {
@@ -91,6 +90,15 @@
   text-decoration: none;
   color: teal;
   text-transform: uppercase;
+}
+
+.article-body-container {
+  width: 70%;
+  padding: 20px 0;
+}
+
+.tag-title {
+  font-size: 1.5em;
 }
 
 @media (max-width:900px){
