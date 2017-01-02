@@ -1,0 +1,17 @@
+@import "variables";
+
+.contact-container {
+  .contact-link {
+    text-align: center;
+  }
+
+  .contact-form-wrapper {
+    box-shadow: 1px 1px 6px black;
+    background: rgba(0,0,0,.1);
+    padding: 20px;
+
+    h2 {
+      font-size: 2em;
+    }
+  }
+}
