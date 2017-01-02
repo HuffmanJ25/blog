@@ -21,4 +21,6 @@ Rails.application.routes.draw do
 
   get '/about', to: 'about#show'
   get '/contact', to: 'contact#show'
+
+  post '/contact_email', to: 'contact#contact_email'
 end
