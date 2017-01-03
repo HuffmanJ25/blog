@@ -7,7 +7,7 @@ class ContactController < ApplicationController
     name = params[:name]
     body = params[:body]
     email = params[:email]
-    ContactMailer.contact_form(name, body, email).deliver_now
+    ContactMailer.contact_form(name, body, email).deliver_later
     flash.notice = "Email has been sent"
   end
 end
