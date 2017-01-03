@@ -9,5 +9,6 @@ class ContactController < ApplicationController
     email = params[:email]
     ContactMailer.contact_form(name, body, email).deliver_later
     flash.notice = "Email has been sent"
+    redirect_to articles_path
   end
 end
