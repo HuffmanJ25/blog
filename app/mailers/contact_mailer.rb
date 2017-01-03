@@ -8,5 +8,6 @@ class ContactMailer < ApplicationMailer
       body = message
     end
     mail.deliver!
+    flash.notice = "Looking forward to reading your message!"
   end
 end
