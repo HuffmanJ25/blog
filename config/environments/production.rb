@@ -56,6 +56,19 @@ Rails.application.configure do
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "blog_#{Rails.env}"
   config.action_mailer.perform_caching = false
+  config.action_mailer.perform_deliveries = true
+
+  config.action_mailer.delivery_method = :smtp
+
+  ActionMailer::Base.smtp_settings = {
+  :address              => "smtp.gmail.com",
+  :port                 => 587,
+  :domain               => "huffmanj25@gmail.com",
+  :user_name            => "huffmanj25",
+  :password             => "skater12321",
+  :authentication       => "plain",
+  :enable_starttls_auto => true
+}
 
 
   # Ignore bad email addresses and do not raise email delivery errors.
