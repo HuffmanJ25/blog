@@ -1,6 +1,12 @@
 class ContactMailer < ApplicationMailer
-  def contact_form(name, body, email)
-    @body = body
-    mail(to: 'huffmanj25@gmail.com', subject: 'Contact Form')
+  require 'mail'
+  def contact_form(name, message, email)
+    mail = Mail.new do
+      from 'Develocity@blog.com'
+      to 'huffmanj25@gmail.com'
+      subject 'contact form'
+      body = message
+    end
+    mail.deliver!
   end
 end
