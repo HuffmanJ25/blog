@@ -2,3 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "variables";
+
+.login-container {
+  width: 50%;
+  margin: 0 auto 100px auto;
+  text-align: center;
+
+  .center {
+    text-align: center;
+    margin: 0 auto;
+  }
+}

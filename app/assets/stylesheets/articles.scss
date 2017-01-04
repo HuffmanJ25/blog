@@ -110,6 +110,14 @@
   font-size: 1.5em;
 }
 
+.edit-container {
+  text-align: center;
+
+  .form-field {
+    width: 700px;
+  }
+}
+
 @media (max-width:900px){
   .index-container {
     width: 100%;
