@@ -122,4 +122,31 @@
   .index-container {
     width: 100%;
   }
+
+  .tag-title {
+    margin-bottom: 0;
+    font-size: 1em;
+    display: inline;
+  }
+
+  .tag-list {
+    margin-top: 0;
+    padding-top: 0;
+    display: inline;
+  }
+}
+
+@media (max-width:840px){
+
+  li {
+    display: inline;
+  }
+  .article-body-container {
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  .article-title {
+    font-size: 1.8em;
+  }
 }
