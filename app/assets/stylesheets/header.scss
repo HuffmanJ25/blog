@@ -1,6 +1,8 @@
 @import "variables";
 
 header {
+  position: fixed;
+
   .mdl-navigation__link {
     border-left: 2px solid $primary-color;
   }
